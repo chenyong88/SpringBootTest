@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: co.its.cy.service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: rj007
+Implementation-Vendor-Id: co.its.cy.service
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/co.its.cy.parent/co.its.cy.service
+Created-By: Maven Integration for Eclipse
+
