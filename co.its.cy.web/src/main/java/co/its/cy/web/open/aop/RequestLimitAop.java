@@ -1,5 +1,6 @@
 package co.its.cy.web.open.aop;
 
+import java.text.MessageFormat;
 import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,8 +38,9 @@ public class RequestLimitAop {
             String key = "req_limit_".concat(url).concat("_").concat(ip);
             boolean checkResult = checkWithRedis(limit, key);
             if (!checkResult) {
-                logger.debug(String.format("requestLimited," + "[用户ip:{0}],[访问地址:{1}]超过了限定的次数[{2}]次", ip, url, limit.count()));
-                throw new RequestLimitException("10001",String.format("requestLimited," + "[用户ip:{}],[访问地址:{}]超过了限定的次数[{}]次", ip, url, limit.count()));
+                logger.info(String.format("requestLimited," + "[用户ip:%s],[访问地址:%s]超过了限定的次数[%s]次", ip, url, limit.count()));
+                throw new RequestLimitException("10001", 
+                		MessageFormat.format("requestLimited," + "[用户ip:{0}],[访问地址:{1}]超过了限定的次数[{2}]次", ip, url, limit.count()));
             }
 		} catch (Exception e) {
 			throw e;
