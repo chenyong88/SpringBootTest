@@ -23,10 +23,10 @@ import co.its.cy.web.open.util.WebSocketUtil;
 public class RequestLimitAop {
 
 	private static final Logger logger = LoggerFactory.getLogger(RequestLimitAop.class);
-	@SuppressWarnings("rawtypes")
 	@Autowired
-	private RedisTemplate redisTemplate;
+	private RedisTemplate<Object, Object> jedisService;
 	
+	@SuppressWarnings("unused")
 	@Before("within(co.its.cy.web.open.controller.demo..*) && @annotation(limit)")
 	public void requestLimit(JoinPoint joinPoint, RequestLimitAnnotation limit) throws RequestLimitException {
 		try {
@@ -37,7 +37,7 @@ public class RequestLimitAop {
             String key = "req_limit_".concat(url).concat("_").concat(ip);
             boolean checkResult = checkWithRedis(limit, key);
             if (!checkResult) {
-                logger.debug(String.format("requestLimited," + "[用户ip:{}],[访问地址:{}]超过了限定的次数[{}]次", ip, url, limit.count()));
+                logger.debug(String.format("requestLimited," + "[用户ip:{0}],[访问地址:{1}]超过了限定的次数[{2}]次", ip, url, limit.count()));
                 throw new RequestLimitException("10001",String.format("requestLimited," + "[用户ip:{}],[访问地址:{}]超过了限定的次数[{}]次", ip, url, limit.count()));
             }
 		} catch (Exception e) {
@@ -45,11 +45,10 @@ public class RequestLimitAop {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	private boolean checkWithRedis(RequestLimitAnnotation limit, String key) {
-		long count = redisTemplate.opsForValue().increment(key, 1);
+		long count = jedisService.opsForValue().increment(key, 1);
 		if (count == 1) {
-            redisTemplate.expire(key, limit.time(), TimeUnit.MILLISECONDS);
+			jedisService.expire(key, limit.time(), TimeUnit.MILLISECONDS);
         }
         if (count > limit.count()) {
             return false;
