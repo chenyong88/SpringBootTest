@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: co.its.cy.web.open.DemoControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.174 s <<< FAILURE! - in co.its.cy.web.open.DemoControllerTest
+initializationError(co.its.cy.web.open.DemoControllerTest)  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.Exception: No runnable methods
+
