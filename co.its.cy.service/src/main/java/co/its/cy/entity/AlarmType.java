@@ -6,14 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.Table;
-
 import lombok.Data;
 
 
 @Data
 @javax.persistence.Entity
-@Table(appliesTo="AlarmType")
+@javax.persistence.Table(name="alarmtype")
 public class AlarmType  implements Serializable{
 	private static final long serialVersionUID = -5218076739283020378L;
 	
@@ -21,14 +19,14 @@ public class AlarmType  implements Serializable{
 	@GeneratedValue
 	private Integer id;
   
-	@Column(nullable = true)
-	private String AlarmDesc;
+	@Column( name = "alarmdesc" )
+	private String alarmDesc;
 	
-	@Column
-	private String GroupName;
+	@Column( name = "groupname" )
+	private String groupName;
 	
-	@Column
-	private Integer ShowFlag;
+	@Column( name = "showflag" )
+	private Integer showFlag;
 	
 	
 }

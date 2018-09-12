@@ -5,12 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.alibaba.dubbo.config.annotation.Service;
-
 import co.its.cy.api.redis.JedisService;
 import redis.clients.jedis.JedisCluster;
 
-@Service
+
 public class RedisServiceImpl  implements JedisService{
 
 	@Autowired

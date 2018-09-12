@@ -10,8 +10,8 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.dubbo.common.json.JSON;
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.fastjson.JSON;
 
 import co.its.cy.annotation.RedisCacheAnotation;
 import co.its.cy.api.redis.JedisService;
@@ -46,7 +46,7 @@ public class RedisCacheAspect {
 	            logger.info("缓存未命中");
 	            //缓存不存在，则调用原方法，并将结果放入缓存中
 	            result = pjp.proceed(args);
-	            redisResult = JSON.json(result);
+	            redisResult = JSON.toJSONString(redisResult);
 	            jedisService.set(key,redisResult,cacheTime);
 	        } else{
 	            //缓存命中
@@ -54,7 +54,7 @@ public class RedisCacheAspect {
 	            redisResult = jedisService.get(key);
 	            //得到被代理方法的返回值类型
 	            Class returnType = method.getReturnType();
-	            result = JSON.parse(redisResult, returnType);
+	            result = JSON.parseObject(redisResult, returnType);
 	        }
 	        return result;
 	}
