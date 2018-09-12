@@ -13,7 +13,7 @@ import co.its.cy.web.open.annotation.RequestLimitAnnotation;
 
 @RestController
 public class DemoController {
-	@Reference
+	@Reference(version="1.0.0")
 	private DemoService demoService;
 	@RequestMapping("/api")
 	@RequestLimitAnnotation(count = 3)
