@@ -1,0 +1,10 @@
+label.checkbox input[type='checkbox']{margin:0;}
+.table-footer{transition: all 0.3s ease 0s;}
+.label{font-size: 13px; line-height: 40px;height: 40px;}
+.progress{margin-bottom: 0;}
+
+td.hasChildren {padding-left: 4px;}
+
+.tr-children, .tr-children > td {padding: 0;}
+.tr-children > td > table {padding: 5px; background-color: #fff; border: 2px solid #DDDDDD;}
+.tr-children > td > table td{border: none;}

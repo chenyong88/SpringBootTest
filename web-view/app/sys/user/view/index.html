@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel='icon' href='/favicon.ico' type='image/x-icon' />
+<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+    <title>然之协同</title>
+<script language='Javascript'>
+   var config={
+   "webRoot":"\/",
+   "appName":"sys",
+   "cookieLife":30,
+   "requestType":"GET",
+   "requestFix":"-",
+   "moduleVar":"m",
+   "methodVar":"f",
+   "viewVar":"t",
+   "defaultView":"html",
+   "themeRoot":"\/theme\/",
+   "currentModule":"index",
+   "currentMethod":"index",
+   "clientLang":"zh-cn",
+   "requiredFields":"",
+   "save":"\u4fdd\u5b58",
+   "router":"",
+   "runMode":"front",
+   "timeout":30000,
+   "pingInterval":60}
+</script>
+<script language='Javascript'>if(typeof(v) != "object") v = {};v.entryID = "superadmin";</script>
+<link rel='stylesheet' href='../../../../css/theme/default/all.css' type='text/css' media='screen' />
+<link rel='stylesheet' href='../../../../css/theme/default/ips.css' type='text/css' media='screen' />
+<link rel='stylesheet' href='../../../../css/theme/clear/style.css' type='text/css' media='screen' />
+<link rel='stylesheet' href='../../../../css/theme/clear/style.css' type='text/css' media='print'  />
+<script type="text/javascript" src="../../../../js/jquery/min.js" ></script>
+<script src='../../../../js/all.js' type='text/javascript'></script>
+
+<style>.categoryButton, .categoryMenu li button {height: 40px; width: 40px; padding: 6px; text-align: center;}
+.categoryButton .icon, .categoryMenu li .app-btn .icon{
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 28px;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 28px;
+}
+
+.categoryMenu{opacity: 1; left: 39px; padding: 0px 5px 0px 5px;}
+.categoryMenu li {float: left;}
+.categoryButton.active, .categoryMenu li button.active{background-color: rgba(255, 255, 255, 0.2);color: rgba(255, 255, 255, 0.85);}
+</style><!--[if lt IE 9]>
+<script src='/js/html5shiv/min.js?v=4.8' type='text/javascript'></script>
+<script src='/js/respond/min.js?v=4.8' type='text/javascript'></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script src='/js/jquery/placeholder/min.js?v=4.8' type='text/javascript'></script>
+<![endif]-->
+<script language='Javascript'>v.lang = {"confirmDelete":"\u60a8\u786e\u5b9a\u8981\u6267\u884c\u5220\u9664\u64cd\u4f5c\u5417\uff1f","confirmFinish":"\u60a8\u786e\u5b9a\u8981\u6267\u884c\u5b8c\u6210\u64cd\u4f5c\u5417\uff1f","deleteing":"\u5220\u9664\u4e2d","doing":"\u5904\u7406\u4e2d","timeout":"\u7f51\u7edc\u8d85\u65f6,\u8bf7\u91cd\u8bd5","confirmDiscardChanges":"\u8868\u5355\u5df2\u66f4\u6539\uff0c\u786e\u5b9a\u5173\u95ed\uff1f","yes":"\u662f","no":"\u5426"};</script>
+</head>
+<body class='m-index-index'>
+<script src='../../../../js/jquery/ips.js' type='text/javascript'></script>
+<script language='Javascript'>v.attend = 1;</script>
+<!-- Desktop -->
+<div id='desktop' class='fullscreen-mode'>
+  <div id='leftBar' class='dock-left unselectable'>
+    <button id='start' class='dock-bottom' type='button' title="demo">
+      <div class='avatar avatar-md'></div>
+    </button>
+    <ul id='startMenu' class='dropdown-menu fade'>
+      <li class='with-avatar'><a href='' data-toggle='modal' data-id='profile'><div class='avatar avatar-md'></div><strong>demo</strong></a>
+</li>
+      <li class="divider"></li>
+      <li class='dropdown-submenu'><a href='###' data-toggle='dropdown' class='dropdown-toggle'><i class='icon icon-globe'></i> 简体</a>
+<ul class='dropdown-menu'>
+  <li><a href='javascript:selectLang("zh-tw")'>繁體</a></li><li><a href='javascript:selectLang("en")'>English</a></li></ul>
+</li>
+      <li class='dropdown-submenu'><a href='###' data-toggle='dropdown' class='dropdown-toggle'><i class='icon icon-adjust'></i> 主题</a>
+<ul class='dropdown-menu'>
+  <li class='theme-option'><a href='javascript:selectTheme("default");' data-value='default'>默认</a></li><li class='theme-option active'><a href='javascript:selectTheme("clear");' data-value='clear'>清晰</a></li></ul>
+</li>
+      <li><a href='/?m=misc&f=about' data-id='about' data-toggle='modal' data-width='500'><i class='icon icon-info-sign'></i> 关于</a></li>
+      <li class="divider"></li>
+            <li><a href='/?m=entry&f=create' data-id='superadmin' class='app-btn'><i class='icon icon-plus'></i> 添加应用</a>
+</li>
+            <li><a href='javascript:;' class='fullscreen-btn' data-id='allapps'><i class='icon icon-th-large'></i> 所有应用</a></li>
+      <li class="divider"></li>
+      <li><a href='/?m=user&f=logout' ><i class='icon icon-signout'></i> 退出</a>
+</li>
+    </ul>
+    <div id='apps-menu'>
+      <ul class='bar-menu'></ul>
+      <button id='moreOptionBtn' data-toggle='tooltip' data-tip-class='s-menu-tooltip' data-placement='right' data-btn-type='menu' class='btn-more' data-original-title='...'><i class='icon icon-ellipsis-h'></i></button>
+      <ul id='moreOptionMenu' class='bar-menu dropdown-menu fade'>
+      </ul>
+    </div>
+  </div>
+  <div id='bottomBar' class='dock-bottom unselectable'>
+    <div id='taskbar'><ul class='bar-menu'></ul></div>
+    <div id='bottomRightBar' class='dock-right'>
+      <ul class='bar-menu'>
+        <li><a href='javascript:void(0)' class='sign signin'>签到</a>
+</li><li><a href='javascript:void(0)' class='sign signout'>签退</a>
+</li>        <li><button id='showDesk' type='button' class='fullscreen-btn icon-desktop' data-id='home' data-toggle='tooltip' title='桌面'></button></li>
+      </ul>
+      <div class='copyright'><a href='http://www.ranzhi.org/?v=4.8' target='_blank'>然之协同 4.8</a></div>
+    </div>
+  </div>
+  <div id='home' class='fullscreen fullscreen-active unselectable'>
+    <nav class='navbar navbar-main navbar-fixed-top' id='mainNavbar'>
+      <div class='collapse navbar-collapse'>
+        <ul class='nav navbar-nav'>
+          <li><a href='' data-toggle='modal' data-id='profile'><i class='icon-user'></i> demo</a>
+</li>
+        </ul>
+        <ul class='nav navbar-nav'>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>待办</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>任务</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>项目</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>订单</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>合同</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>审批</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>组织</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>动态</a></li>
+		<li ><a class='app-btn open' data-id='dashboard' href=''>联系人</a></li>
+		</ul>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a class='navbar-brand' href=''></a></li>
+          <li><a href='javascript:;' class='refresh-all-panel'><i class='icon-repeat'></i></a></li>
+          <li><a data-toggle='modal' href='/?m=block&f=admin' title='添加区块'><i class='icon-plus'></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id='dashboardWrapper'>
+      <div class='panels-container dashboard' id='dashboard' data-confirm-remove-block='确定移除区块【{0}】吗？'>
+        <div class='row'>
+                                        <div class='col-xs-4 pull-left'>
+          <div class='panel ' id='block1' data-id='1' data-blockid='6' data-name='最新帖子' data-url='/?m=entry&f=printBlock&index=1' >
+              <div class='panel-heading'>
+                <div class='panel-actions'>
+                  <a href='/team/index.php?m=forum&f=index' class='more app-btn' data-id='team'>更多<i class='icon-double-angle-right'></i></a>
+                  <button class="btn btn-mini refresh-panel" type='button'><i class="icon-repeat"></i></button>
+                  <div class='dropdown'>
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type='button'><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="/?m=block&f=admin&index=1" data-toggle='modal' class='edit-block' data-title='最新帖子' data-icon='icon-pencil'><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                最新帖子              </div>
+              <div class='panel-body no-padding'></div>
+            </div>
+          </div>
+                              <div class='col-xs-4 pull-left'>
+          <div class='panel ' id='block2' data-id='2' data-blockid='16' data-name='任务列表' data-url='/?m=entry&f=printBlock&index=2' >
+              <div class='panel-heading'>
+                <div class='panel-actions'>
+                  <a href='/?m=my&f=task&type=assignedTo' class='more app-btn' data-id='dashboard'>更多<i class='icon-double-angle-right'></i></a>
+                  <button class="btn btn-mini refresh-panel" type='button'><i class="icon-repeat"></i></button>
+                  <div class='dropdown'>
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type='button'><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="/?m=block&f=admin&index=2" data-toggle='modal' class='edit-block' data-title='任务列表' data-icon='icon-pencil'><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                任务列表              </div>
+              <div class='panel-body no-padding'></div>
+            </div>
+          </div>
+                              <div class='col-xs-4 pull-left'>
+          <div class='panel ' id='block3' data-id='3' data-blockid='24' data-name='合同列表' data-url='/?m=entry&f=printBlock&index=3' >
+              <div class='panel-heading'>
+                <div class='panel-actions'>
+                  <a href='/crm/index.php?m=contract&f=browse&mode=finished' class='more app-btn' data-id='crm'>更多<i class='icon-double-angle-right'></i></a>
+                  <button class="btn btn-mini refresh-panel" type='button'><i class="icon-repeat"></i></button>
+                  <div class='dropdown'>
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type='button'><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="/?m=block&f=admin&index=3" data-toggle='modal' class='edit-block' data-title='合同列表' data-icon='icon-pencil'><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                合同列表              </div>
+              <div class='panel-body no-padding'></div>
+            </div>
+          </div>
+                              <div class='col-xs-4 pull-left'>
+          <div class='panel panel-success' id='block4' data-id='4' data-blockid='62' data-name='付款帐号' data-url='/?m=entry&f=printBlock&index=4' >
+              <div class='panel-heading'>
+                <div class='panel-actions'>
+                  <a href='/cash/index.php?m=depositor&f=index' class='more app-btn' data-id='cash'>更多<i class='icon-double-angle-right'></i></a>
+                  <button class="btn btn-mini refresh-panel" type='button'><i class="icon-repeat"></i></button>
+                  <div class='dropdown'>
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type='button'><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="/?m=block&f=admin&index=4" data-toggle='modal' class='edit-block' data-title='付款帐号' data-icon='icon-pencil'><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                付款帐号              </div>
+              <div class='panel-body no-padding'></div>
+            </div>
+          </div>
+                              <div class='col-xs-4 pull-left'>
+          <div class='panel ' id='block5' data-id='5' data-blockid='14' data-name='系统公告' data-url='/?m=entry&f=printBlock&index=5' >
+              <div class='panel-heading'>
+                <div class='panel-actions'>
+                  <a href='/oa/index.php?m=announce&f=browse' class='more app-btn' data-id='oa'>更多<i class='icon-double-angle-right'></i></a>
+                  <button class="btn btn-mini refresh-panel" type='button'><i class="icon-repeat"></i></button>
+                  <div class='dropdown'>
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type='button'><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="/?m=block&f=admin&index=5" data-toggle='modal' class='edit-block' data-title='系统公告' data-icon='icon-pencil'><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                系统公告              </div>
+              <div class='panel-body no-padding'></div>
+            </div>
+          </div>
+                              <div class='col-xs-4 pull-left'>
+          <div class='panel panel-default' id='block6' data-id='6' data-blockid='60' data-name='最新动态' data-url='/?m=entry&f=printBlock&index=6' >
+              <div class='panel-heading'>
+                <div class='panel-actions'>
+                                    <button class="btn btn-mini refresh-panel" type='button'><i class="icon-repeat"></i></button>
+                  <div class='dropdown'>
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type='button'><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="/?m=block&f=admin&index=6" data-toggle='modal' class='edit-block' data-title='最新动态' data-icon='icon-pencil'><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                最新动态              </div>
+              <div class='panel-body no-padding'></div>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+  <div id='allapps' class='fullscreen unselectable'>
+    <header>
+      <ul class='nav' id='appSearchNav'>
+        <li><a href="javascript:;" class='app-search' data-key=''><i class='icon-th-large'></i> <span>所有应用</span> &nbsp;<small class='muted entries-count'></small></a></li>
+        <li><a href="javascript:;" class='app-search' data-key=':menu'><i class=''></i> <span>左侧显示</span> &nbsp;<small class='muted search-count'></small></a></li>
+        <li><a href="javascript:;" class='app-search' data-key=':!menu'><i class=''></i> <span>非左侧显示</span> &nbsp;<small class='muted search-count'></small></a></li>
+      </ul>
+      <div class='search-input'>
+        <i class='icon-search icon'></i>
+        <input id='search' type='text' class='form-control-pure form-control'>
+        <button id='cancelSearch' class='btn btn-pure btn-mini' type='button'><i class='icon-remove'></i></button>
+      </div>
+      <div class='actions'>
+                <a href='/?m=entry&f=create' data-id='superadmin' class='app-btn btn btn-pure'><i class='icon-plus'></i> 添加应用</a>
+              </div>
+    </header>
+    <div class='all-apps-list' id='allAppsList'>
+      <ul class='bar-menu'>
+      </ul>
+    </div>
+  </div>
+  <div id='deskContainer'></div>
+  <div id='modalContainer'></div>
+</div>
+<div id='noticeBox'>
+  </div>
+<div id='categoryTpl' class='hide'>
+  <ul id='categoryMenucategoryid' class='category categoryMenu dropdown-menu fade' data-id='categoryid'></ul>
+</div>
+<script>
+var entries = [
+{
+    id        : 'dashboard',
+    code      : 'dashboard',
+    name      : '我的地盘',
+    abbr      : '我的',
+    open      : 'iframe',
+    desc      : '我的地盘',
+    menu      : 'all',
+    sys       : true,
+    icon      : 'icon-home',
+    url       : '',
+    order     : 0, 
+},
+{
+    id        : 'allapps',
+    code      : 'allapps',
+    name      : '所有应用',
+    display   : 'fullscreen',
+    desc      : '所有应用',
+    menu      : 'menu',
+    icon      : 'icon-th-large',
+    sys       : true,
+    forceMenu : true,
+    order     : 9999999
+},
+{
+    id        : 'home',
+    code      : 'home',
+    name      : '',
+    display   : 'fullscreen',
+    menu      : 'none',
+    icon      : 'icon-desktop',
+    sys       : true,
+    forceMenu : true,
+    order     : 9999998
+}];
+
+
+entries.push(
+{
+    id    : 'superadmin',
+    code  : 'superadmin',
+    name  : '后台管理',
+    open  : 'iframe',
+    desc  : '后台管理',
+    menu  : 'all',
+    sys   : true,
+    icon  : 'icon-cog',
+    url   : "",
+    order : 9999997
+});
+
+var ipsLang = {};
+ipsLang["confirmClose"] = "确认要关闭　【{0}】 吗？";ipsLang["entryNotFindTip"] = "应用没有找到！";ipsLang["busyTip"] = "应用正忙，请稍候...";ipsLang["reloadText"] = "刷新";ipsLang["closeText"] = "关闭";ipsLang["openText"] = "打开";ipsLang["removeText"] = "移除";ipsLang["fixToMenuText"] = "左侧显示";ipsLang["removeFromMenuText"] = "左侧移除";ipsLang["deleteEntryText"] = "删除应用";ipsLang["removedEntry"] = "应用【{0}】已删除";ipsLang["confirmRemoveEntry"] = "确定移除应用【{0}】吗？";ipsLang["showWindowText"] = "显示";ipsLang["confirmRemoveBlock"] = "确定要删除区块 【{0}】 吗？";ipsLang["removedBlock"] = "区块已删除";ipsLang["hiddenBlock"] = "区块已隐藏";ipsLang["orderdBlocksSaved"] = "排序已保存";ipsLang["moreOptionTip"] = "显示另外 {0} 个应用";ipsLang["confirmCloseBrowser"] = "提示：当前有打开的应用窗口";
+entries.push(
+            {
+                id:       '1',
+                code:     'crm',
+                name:     '客户管理',
+                url:      '',
+                open:     'iframe', 
+                desc:     '客户管理',
+                size:      'max',
+                icon:     '../../../../css/theme/default/images/ips/app-crm.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '客户',
+                order:    '20',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '8',
+                code:     'proj',
+                name:     '项目',
+                url:      '',
+                open:     'iframe', 
+                desc:     '项目',
+                size:      'max',
+                icon:     './../../../../css/theme/default/images/ips/app-proj.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '项目',
+                order:    '30',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '4',
+                code:     'team',
+                name:     '团队',
+                url:      '',
+                open:     'iframe', 
+                desc:     '团队',
+                size:      'max',
+                icon:     './../../../../css/theme/default/images/ips/app-team.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '团队',
+                order:    '40',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '9',
+                code:     'doc',
+                name:     '文档',
+                url:      '',
+                open:     'iframe', 
+                desc:     '文档',
+                size:      'max',
+                icon:     './../../../../css/theme/default/images/ips/app-doc.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '文档',
+                order:    '50',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '3',
+                code:     'oa',
+                name:     '日常办公',
+                url:      '',
+                open:     'iframe', 
+                desc:     '日常办公',
+                size:      'max',
+                icon:     './../../../../css/theme/default/images/ips/app-oa.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '办公',
+                order:    '60',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '2',
+                code:     'cash',
+                name:     '现金记账',
+                url:      '',
+                open:     'iframe', 
+                desc:     '现金记账',
+                size:      'max',
+                icon:     './../../../../css/theme/default/images/ips/app-cash.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '记账',
+                order:    '70',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '6',
+                code:     'webapp1',
+                name:     'RunJS',
+                url:      '',
+                open:     'blank', 
+                desc:     'RunJS',
+                size:      {"width":1024,"height":600},
+                icon:     '',
+                control:  'full',
+                position: 'center',
+                menu:     'list',
+                display:  'sizeable',
+                abbr:     '',
+                order:    '100',
+                sys:      '0',
+                category: '0'
+            });
+</script>
+<script language='Javascript'>$(function()
+{
+    /* start ips */
+    $.ipsStart(entries, $.extend({onBlocksOrdered: sortBlocks, onDeleteBlock: deleteBlock, onDeleteEntry: deleteEntry, onUpdateEntryMenu: updateEntryMenu, onSortEntries: sortEntries, onResize: resizeBlock}, config, ipsLang));
+    if(v.attend)
+    {
+        initAttendButton();
+        $('.sign').parent('li').show();
+    }
+    else
+    {
+        $('.sign').parent('li').hide();
+    }
+
+    $(document).on('mouseover', '.categoryButton', function()
+    {
+        $('.categoryButton').not('.open').removeClass('active');
+        $(this).addClass('active');
+        var id    = $(this).data('id');
+        var menu  = $('#categoryMenu' + id);
+        var lis   = menu.find('li');
+        var color = $('body').css('background-color');
+        menu.css({'background-color' : color, 'top' : $(this).offset().top - 3, 'width' : 40 * lis.size() + 20});
+        $('.categoryMenu').not(menu).hide();
+        menu.show();
+    });
+
+    $(document).on('mouseover', '.categoryMenu li .app-btn', function()
+    {
+        $('.categoryMenu li .app-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $(document).on('mouseout', '.categoryMenu li .app-btn', function()
+    {
+        $('.categoryMenu li .app-btn').removeClass('active');
+        var id = $(this).parents('.categoryMenu').data('id');
+        if(!$('#category' + id).hasClass('open')) $('#category' + id).removeClass('active');
+    });
+
+    $(document).on('click', '.categoryMenu li .app-btn', function()
+    {
+        $('.categoryMenu').hide();
+        $('.categoryButton').removeClass('active');
+
+        var id = $(this).parents('.categoryMenu').data('id');
+        $('#category' + id).addClass('open active');
+    });
+
+    $(document).on('mouseover', '#leftBar #apps-menu .bar-menu li .app-btn', function()
+    {
+        $('.categoryButton').not(this).not('.open').removeClass('active');
+        if(!$(this).hasClass('categoryButton')) $('.categoryMenu').hide();
+    });
+
+    $(document).on('click', '#leftBar #apps-menu .bar-menu li .app-btn', function()
+    {
+        $('.categoryButton').removeClass('active');
+        $('.categoryMenu').hide();
+    });
+
+    $(document).on('click', '#bottomBar #taskbar .bar-menu li .app-btn', function()
+    {
+        $('.categoryButton').removeClass('active');
+        var dataid = $(this).data('id');
+        $('.categoryMenu li .app-btn').each(function()
+        {
+            if($(this).data('id') == dataid)
+            {
+                var id = $(this).parents('.categoryMenu').data('id');
+                $('#category' + id).addClass('active');
+                return;
+            }
+        });
+    });
+
+    $(document).mouseover(function(e)
+    {
+        $('.categoryMenu').each(function()
+        {
+            if($(this).is(':visible'))
+            {
+                var dataid  = $(this).data('id');
+                var button  = $('#category' + dataid);
+                var top     = button.offset().top;
+                var left    = button.offset().left;
+                var right   = left + button.width() + $(this).width();
+                var bottom  = top + button.height() + $(this).height();
+                if(e.pageX < left || e.pageX > right || e.pageY < top || e.pageY > bottom)
+                {
+                    $(this).hide();
+                }
+            }
+        });
+    });
+});
+
+/**
+ * Update orders of entries
+ * 
+ * @param  object      orders
+ * @param  function    callback after success
+ * @access public
+ * @return void
+ */
+function sortEntries(orders, callback)
+{
+    $.post(createLink('entry', 'customSort'), orders, function(data)
+    {
+        callback && callback(data.result == 'success');
+    }, 'json');
+}
+
+/**
+ * Update menu attribute of entry
+ * 
+ * @param  int         entry id 
+ * @param  function    callback after success
+ * @access public
+ * @return void
+ */
+function updateEntryMenu(et, callback)
+{
+    $.post(createLink('entry', 'updateEntryMenu'), et, function(data)
+    {
+        callback && callback(data.result == 'success');
+    }, 'json');
+}
+
+/**
+ * Delete entry.
+ * 
+ * @param  object      entry 
+ * @param  function    callback after delete success
+ * @access public7
+ * @return void
+ */
+function deleteEntry(et, callback)
+{
+    $.getJSON(createLink('entry', 'delete', 'code=' + et.code), function(data)
+    {
+        callback && callback(data.result == 'success');
+    });
+}
+
+/**
+ * Delete block.
+ * 
+ * @param  int    $index 
+ * @access public
+ * @return void
+ */
+function deleteBlock(index)
+{
+    $.getJSON(createLink('block', 'delete', 'index=' + index), function(data)
+    {
+        if(data.result != 'success')
+        {
+            alert(data.message);
+            return false;
+        }
+    })
+}
+
+/**
+ * Hidden block;
+ * 
+ * @param  index $index 
+ * @access public
+ * @return void
+ */
+function hiddenBlock(index)
+{
+    $.getJSON(createLink('block', 'delete', 'index=' + index + '&app=sys&type=hidden'), function(data)
+    {
+        if(data.result != 'success')
+        {
+            alert(data.message);
+            return false;
+        }
+        reloadHome();
+        $.zui.messager.info(ipsLang["hiddenBlock"]);
+    })
+}
+
+/**
+ * Sort blocks.
+ * 
+ * @param  object $orders  format is {'block2' : 1, 'block1' : 2, oldOrder : newOrder} 
+ * @access public
+ * @return void
+ */
+function sortBlocks(orders)
+{
+    var oldOrder = new Array();
+    var newOrder = new Array();
+    for(i in orders)
+    {
+       oldOrder.push(i.replace('block', ''));
+       newOrder.push(orders[i]);
+    }
+
+    $.getJSON(createLink('block', 'sort', 'oldOrder=' + oldOrder.join(',') + '&newOrder=' + newOrder.join(',')), function(data)
+    {
+        if(data.result != 'success') return false;
+
+        $('#home .panels-container .panel:not(.panel-dragging-holder)').each(function()
+        {
+            var $this = $(this);
+            var index = $this.data('order');
+            var url = createLink('entry', 'printBlock', 'index=' + index);
+            /* Update new index for block id edit and delete. */
+            $this.attr('id', 'block' + index).data('id', index).attr('data-url', url).data('url', url);
+            $this.find('.panel-actions .edit-block').attr('href', createLink('block', 'admin', 'index=' + index));
+        });
+    });
+}
+
+/**
+ * Resize block
+ * @param  object $event
+ * @access public
+ * @return void
+ */
+function resizeBlock(event)
+{
+  var blockID = event.element.find('.panel').data('blockid');
+  var data = event.type == 'vertical' ? event.height : event.grid;
+  $.getJSON(createLink('block', 'resize', 'id=' + blockID + '&type=' + event.type + '&data=' + data), function(data)
+  {
+      if(data.result !== 'success') event.revert();
+  });
+}
+
+/**
+ * init sign in and sign out button.
+ * 
+ * @access public
+ * @return void
+ */
+function initAttendButton()
+{
+    $('.signin').click(function()
+    {
+        $.getJSON(createLink('oa.attend', 'signin'), function(data)
+        {
+            if(data.result == 'success') $.zui.messager.success(data.message);
+            if(data.result == 'fail') $.zui.messager.info(data.message);
+        });
+    });
+    $('.signout').click(function()
+    {
+        $.getJSON(createLink('oa.attend', 'signout'), function(data)
+        {
+            if(data.result == 'success') window.location.href = createLink('user', 'logout');
+            if(data.result == 'fail') $.zui.messager.info(data.message);
+        });
+    });
+}
+
+</script>
+</div>
+</body>
+</html>

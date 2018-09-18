@@ -1,0 +1,12 @@
+.itemGroup {width: 20%; float: left; padding-left: 5px; padding-right: 5px;}
+
+.input-group {margin-bottom: 10px;}
+.input-group-btn a {height: 32px;}
+
+.panel-basic     .panel-heading {background: #d1fecb !important;}
+.panel-bonus     .panel-heading {background: #f5d0f5 !important;}
+.panel-allowance .panel-heading {background: #d8f2fa !important;}
+.panel-deduction .panel-heading {background: #fdfdc7 !important;}
+
+.row {overflow:hidden;}
+.row>div{padding-bottom:800px;margin-bottom:-800px;}

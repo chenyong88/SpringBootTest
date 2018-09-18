@@ -1,0 +1,69 @@
+---
+name: Ranzhi pro extension!
+code: ranzhipro
+type: extension
+copyright: >
+  QingDao Nature Easy Soft Network
+  Technology Co.,LTD
+site: https://www.ranzhi.org
+author: 'liugang<liugang@cnezsoft.com>'
+abstract: Ranzhi pro extension.
+desc: "The extension provide functions of ranzhi pro, include sales process definition, feedback, leads synchronize, salary, commission and new reports."
+install: |
+  1. Install through the buildin extension manager.
+    1.1 Login to ranzhi system as administrator, visit the admin->extension
+    1.2 Go to the obtain page, search helloranzhi.
+    1.3 Click the AutoInstall and begin the installation.
+  2. Manual install. Unzip this package and copy files under app directory to the ranzhi/app.
+license:|
+  本协议是用户（您）和然之开发小组(易软天创)之间关于使用然之软件商业版达成的法律协议。您安装或者使用本软件的行为将视为对本协的接受及同意。除非您接受本协议，否则您无权下载、安装或使用本软件。
+
+  1、本软件是由易软天创独立开发。软件的一切版权等知识产权均归易软天创所有，未经易软天创官方授权，任何拷贝、销售、转让、出租、修改本软件的行为均被认为是侵权行为。
+  2、本软件受版权法和国际版权条约以及其他知识产权法律和条约的保护。您不可以分解、反编译、反相工程和重构本软件。
+  3、用户不得利用本软件发表、传播、储存违反国家法律、危害国家安全、祖国统一、社会稳定的内容，或侮辱、诽谤、色情、暴力等任何违反国家法律法规政策的内容。
+  4、利用本授权软件发生的商业行为均由授权用户自行负责，因利用本软件进行商业行为所产生的一切纠纷均与本软件无关。
+  5、易软天创保留在任何时候为您提供本软件修改、升级版本的权利，以及为修改或升级服务收取费用的权利。
+
+releases:
+  1.0:
+    ranzhi:
+      compatible: all
+      incompatible:
+    charge: business
+    date: 2016-04-08
+    conflicts: null
+    depends: null
+    license: Business software non free software 
+    changelog: |
+        1.Sales process definition
+        2.Feedback
+        3.Leads synchronize
+        4.Salary
+        5.Commission
+        6.New reports
+  1.1:
+    ranzhi:
+      compatible: 3.4 
+      incompatible:
+    charge: business
+    date: 2016-07-07
+    conflicts: null
+    depends: null
+    license: Business software non free software 
+    changelog: |
+        1.Workflow
+        2.Mobile Web
+        3.Perfect detail, bug fixed
+  1.2:
+    ranzhi:
+      compatible: 3.5 
+      incompatible:
+    charge: business 
+    date: 2016-08-17
+    conflicts: null
+    depends: null
+    license: Business software non free software 
+    changelog: |
+        1.Improve workflow
+        2.Improve salary
+        3.Improve commission 

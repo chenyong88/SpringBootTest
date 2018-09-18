@@ -1,0 +1,4 @@
+.chosen-container-single .chosen-drop {min-width: 300px; border-top: 1px solid #ddd!important}
+.table {border:1px solid #ddd;}
+.table thead.text-center th {text-align:center;}
+.required:after{top:-5px;}

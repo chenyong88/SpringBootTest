@@ -1,0 +1,9 @@
+i.btn {font-family: ZenIcon;}
+#detailBox .row {margin-top: 5px; margin-bottom: 5px;}
+#currency {border-top-left-radius: 4px; border-bottom-left-radius: 4px;}
+#detailBox .table-detail td, #detailBox .table-detail th {padding-left: 5px;}
+#category_chosen + .input-group-addon {padding-right: 30px;}
+
+#customer_chosen .chosen-results > li.no-results {cursor: pointer;}
+#customer_chosen .chosen-results > li.no-results:hover {color: #1a4f85; background-color: #ddd;}
+#customer_chosen .chosen-results > li.no-results > span {font-weight: bold;}

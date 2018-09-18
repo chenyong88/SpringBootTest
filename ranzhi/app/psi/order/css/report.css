@@ -1,0 +1,9 @@
+.panel-heading .nav > li {float:left; margin-right: 2px;}
+.panel-heading .nav > li > a {padding:0px 15px;}
+
+#searchTab {transition: all .3s cubic-bezier(.175, .885, .32, 1);}
+#searchTab.active {background: #fff; border: 1px solid #ddd; border-bottom: none}
+#searchTab.active:hover {background: #ddd}
+#searchTab.active > a:after {font-size: 14px; font-family: ZenIcon; content: ' \e6e2'; color: #808080}
+
+#querybox {margin-top:-1px; border-top: 1px solid #ddd}

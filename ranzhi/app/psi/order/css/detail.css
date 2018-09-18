@@ -1,0 +1,12 @@
+ol {margin-bottom:0px;}
+.panel-body {padding: 10px;}
+.panel-body > .table {margin-bottom: 0px;}
+/* table info */
+.table-info {font-size: 13px;}
+.table-info th, .table-info td {border-bottom: none; padding: 2px 5px;}
+.table-info th {text-align: right; vertical-align: middle; border-bottom: none; font-weight: normal;}
+/* page actions */
+.page-actions {text-align: center; padding: 10px 0; margin-bottom: 20px;}
+.page-actions .btn-group {margin-right: 10px}
+.page-actions.fixed {position: fixed; background: #fff; border-top: 1px solid #ddd; bottom: 0; margin-bottom: 0; z-index: 999; box-shadow: 0 -2px 10px rgba(0,0,0,0.15)}
+body .page-actions-fixed {padding-bottom: 70px}

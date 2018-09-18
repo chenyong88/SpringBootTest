@@ -1,0 +1,22 @@
+.with-side .side{width: 240px;}
+.with-side .main{margin-left: 260px;}
+.monthDIV {margin-bottom: 5px;}
+
+a.chosen-single.chosen-default {border-radius: 0px 4px 4px 0px !important;}
+
+.headerTH i {margin-right: 5px;}
+.expandAll, a.expandAll:hover, .collapseAll, a.collapseAll:hover {color: #333333;}
+
+.icon-caret-right {margin-right: 5px;}
+td.groupuser {border-right: 1px solid #ddd;}
+.groupheader th {padding-left: 10px;}
+.footertext {color: #808080;}
+
+#menuActions > .nav {padding: 0 5px;}
+#menuActions > .nav > li > a {padding: 5px 6px; font-size: 13px;}
+#menuActions > .nav > li > a:hover {background: #ddd;}
+
+#matrixShowTypeDIV {padding: 5px;}
+
+.expandAll + .header, .expandAll + .headerSortDown, .expandAll + .headerSortUp,
+.collapseAll + .header, .collapseAll + .headerSortDown, .collapseAll + .headerSortUp{display: inline-block;}

@@ -1,0 +1,8 @@
+.panel-heading.with-nav-tabs {padding: 4px 5px 0 5px}
+.panel-heading > .nav-tabs {margin-bottom: -1px}
+.panel-heading > .nav-tabs > li > a {padding: 5px 10px 8px}
+.panel-heading > .nav-tabs > li > a:focus {outline: none;}
+.panel-heading > .nav-tabs > li.active > a {padding: 6px 10px 7px; color: #333; font-weight: bold;}
+
+#issueTab .table tr th{color: #707070;}
+#issueTab .table tr:last-child td{border-bottom: none;}
