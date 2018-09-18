@@ -1,5 +1,7 @@
 package co.its.cy.web.open.controller.demo;
 
+import java.lang.reflect.Method;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,6 +20,12 @@ public class DemoController {
 	@RequestMapping("/api")
 	@RequestLimitAnnotation(count = 3)
 	public String say( String action , String jsonString, HttpServletRequest request, HttpServletResponse response) {
+		Method [] method = demoService.getClass().getMethods();
+		for (int i = 0; i < method.length; i++) {
+			System.out.println(method[i].getName());
+		} 
+		
+		
 		return   demoService.say(action);
 	}
 }
