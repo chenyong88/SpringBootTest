@@ -1,1 +1,9 @@
 /target/
+<<<<<<< HEAD
+=======
+/bin/
+/.classpath
+/.project
+/.settings/
+/.gitignore
+>>>>>>> refs/heads/home
