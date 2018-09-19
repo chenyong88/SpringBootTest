@@ -1,0 +1,8 @@
+.flow-block{height: 160px;}
+.flow-block .panel-heading{padding-right:40px;position:relative;}
+.flow-block .panel-heading strong{overflow:hidden;display:block;}
+.flow-block .panel-heading .panel-actions{position:absolute;right:10px;top:10px;}
+.flow-block strong{white-space: nowrap;}
+.flow-block .info{height: 65px; word-wrap: break-word;}
+.tr-child, .tr-child > td {padding: 0;}
+.tr-child > td > table {padding: 5px; background-color: #fff; border: 2px solid #DDDDDD;}

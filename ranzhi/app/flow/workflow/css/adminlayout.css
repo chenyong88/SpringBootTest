@@ -1,0 +1,49 @@
+.cols-list {margin-bottom: 10px;border-bottom: 1px solid #ddd;}
+.cols-list .col {border: 1px solid #ddd; height: 30px; line-height: 29px; padding: 0 10px; border-bottom: none; background: #fff; float:none;}
+.cols-list .col .actions {line-height: 30px; vertical-align: middle;}
+.cols-list .col .form-control {display: inline-block; width: 50px; padding: 0px 5px; height: 25px; line-height: 25px; border-color: #ddd; position: relative; top: -2px}
+.cols-list .col select.form-control {width: 100px;}
+.cols-list .col input[id*=defaultValue], .cols-list .col select#defaultValue {width: 200px;}
+.cols-list .col .form-control:hover {border-color: #ddd}
+.cols-list .col .form-control[disabled] {background: none}
+.cols-list .col .form-control[disabled]:hover {border-color: transparent;}
+.cols-list .col .btn {padding: 0px 5px; position: relative; top: -1px}
+.cols-list .col .btn.show-hide {font-size: 13px}
+.cols-list .col .title {cursor: pointer; display: inline-block;}
+.cols-list .col .title-bar {white-space:nowrap; cursor: pointer; display: inline-block; border-left: 1px solid #ddd; padding-left: 6px; position: relative; max-width: 500px; min-width: 30px}
+.cols-list .col .title .icon-move {position: absolute; left: -26px; background: #fff; top: 5px; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 5px;}
+.cols-list .col .label-hide {color: #03c; background: none}
+.cols-list .col .label-show {color: #fff; background: #aaa}
+.cols-list .col .btn.disabled, .cols-list .col.disabled .btn.disabled, .cols-list .col .btn.disabled .label-hide, .cols-list .col.fixed-disabled .btn span, .cols-list .col.fixed-required .btn span {border: none; color: #aaa; cursor: not-allowed; background: none}
+.cols-list .col .icon-move {opacity: 0; transition:all 0.2s; cursor: move;}
+.cols-list .col .actions > span{margin-right: 10px;}
+.cols-list .col:hover {background: #edf3fe}
+.cols-list .col:hover .title-bar {transition: width 0.3s;}
+.cols-list .col:not(.noRequired, .required):hover .icon-move {opacity: 1}
+.cols-list .col.drag-shadow {border: 1px solid #ddd;}
+.cols-list .col.disabled .title {opacity: 0.5;}
+.cols-list .col.disabled .title strong {font-weight: normal;}
+.cols-list .col.disabled .icon-ok {opacity: 0.05;}
+.cols-list .col.disabled .label-hide {color: #fff; background: #aaa}
+.cols-list .col.disabled .label-show {color: #03c; background: none}
+.cols-list .col.drop-to, .cols-list .col.drag-from {opacity: 0.5; visibility: visible;  background: #e5e5e5}
+.cols-list .col.required::after{display:none;}
+.cols-list.sort-disabled .icon-move {display: none;}
+form .chosen-container {top: -2px;}
+form .chosen-container-single .chosen-single{height: 25px; line-height: 15px;}
+form .chosen-container-single .chosen-single abbr{top: 2px;}
+form .chosen-container-multi  .chosen-choices{height: 25px; min-height: 25px; vertical-align: middle}
+form .chosen-container-multi  .chosen-choices li.search-choice{line-height: 12px; margin-top: 2px;}
+form .chosen-container-multi  .chosen-choices li.search-field {line-height: 12px;}
+.cols-list .panel-heading {border: 1px solid #ddd; border-bottom: none; background-color: #f1f1f1; height: 35px; padding: 5px 10px;} 
+.cols-list .panel-heading .title {cursor: pointer; display: inline-block; padding-top: 3px;}
+.cols-list .panel-heading .title-bar {white-space:nowrap; cursor: pointer; display: inline-block; padding-left: 6px; position: relative; max-width: 500px; min-width: 30px}
+.cols-list .panel-heading .title .icon-move {position: absolute; left: -26px; background: #fff; top: 5px; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 5px;}
+.cols-list .panel-heading .icon-move {opacity: 0; transition:all 0.2s; cursor: move;}
+
+.cols-list .panel-heading.disabled{color: #aaa; cursor: not-allowed;}
+.cols-list .panel-heading.disabled .title {opacity: 0.5;}
+.cols-list .panel-heading.disabled .title strong {font-weight: normal;}
+.cols-list .panel-heading.disabled .icon-ok {opacity: 0.05;}
+.cols-list .panel-heading.disabled .label-hide {color: #fff; background: #aaa}
+.cols-list .panel-heading.disabled .label-show {color: #03c; background: none}

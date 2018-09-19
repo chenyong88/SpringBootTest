@@ -1,0 +1,8 @@
+.deal-normal{color: #38B03F}
+.deal-wait{color: #EA644A}
+
+#menu .dropdown-submenu > a {min-width: 80px;}
+#menu .dropdown-submenu .dropdown-menu {left: 100%;}
+
+#menuActions .btn-group .btn {border: none;}
+.btn-group.active .dropdown-toggle {font-weight: bold;}

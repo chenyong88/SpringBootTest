@@ -1,0 +1,25 @@
+.table td .checkbox {margin: 0;}
+.table .checkbox,.table input[type='radio'] + label {margin-right: 10px;}
+.table textarea.form-control{height: 32px;}
+.required:after {top: 1px;}
+
+.chosen-container[id^="depositor"] .chosen-single {max-width: 140px !important}
+.chosen-container[id^="category"]  .chosen-single {max-width: 130px !important}
+.chosen-container[id^="trader"]    .chosen-single {max-width: 230px !important}
+.chosen-container[id^="dept"]      .chosen-single {max-width: 130px !important}
+.chosen-container[id^="product"]   .chosen-single {max-width: 100px !important}
+
+.chosen-container[id^="depositor"] .chosen-drop {min-width: 450px !important}
+.chosen-container[id^="category"]  .chosen-drop {min-width: 450px !important}
+.chosen-container[id^="trader"]    .chosen-drop {min-width: 450px !important}
+.chosen-container[id^="dept"]      .chosen-drop {min-width: 200px !important}
+.chosen-container[id^="handlers"]  .chosen-drop {min-width: 200px !important}
+.chosen-container[id^="product"]   .chosen-drop {min-width: 200px !important}
+
+[name^="type"] {min-width: 60px !important; padding: 5px;}
+[name^="date"] {min-width: 80px !important; padding: 5px;}
+[name^="desc"] {min-width: 60px !important;}
+
+.chosen-container[id^="trader"] .chosen-results > li.no-results {cursor: pointer;}
+.chosen-container[id^="trader"] .chosen-results > li.no-results:hover {color: #1a4f85; background-color: #ddd;}
+.chosen-container[id^="trader"] .chosen-results > li.no-results > span {font-weight: bold;}

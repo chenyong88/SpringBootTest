@@ -1,0 +1,35 @@
+.with-side .side{left: 20px; position: absolute; transition: all 0.3s ease 0s; width: 140px;}
+.with-side .side .menu.affix{top:100px; margin-left:0;}
+.with-side .side .side-body{overflow: hidden;}
+.with-side .main{margin-left: 160px; margin-right: 0; transition: all 0.3s ease 0s;}
+.with-side .main table thead th {height: 34px;}
+.with-side.hide-side .side{border: 0 none; width: 0;}
+.with-side.hide-side .main{margin-left: 0;}
+.with-side.hide-side .side .side-handle{right: -10px;}
+.with-side.hide-side .side .side-body{border: none;}
+.side-handle:hover{background: #c5c5c5 none repeat scroll 0 0; color: #04f; text-decoration: none;}
+.side-handle {
+  background: #d5d5d5 none repeat scroll 0 0;
+  border: 1px solid #d1d1d1;
+  color: #03c;
+  cursor: pointer;
+  line-height: 34px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease 0s;
+  width: 15px;
+  z-index: 99;
+}
+
+.tree > li {margin-right: 0;}
+.tree li.active > a{font-weight: bold;}
+
+textarea.form-control{height:32px;}
+.table a:hover {text-decoration: none;}
+.tooltip {z-index: 9999;}
+
+.footer>th, .footer>td {background-color: #f1f1f1 !important; border-bottom: 1px solid #ddd; vertical-align: bottom;}
+.not-table-hover {background-color: rgb(249, 249, 249) !important;word-break: break-all;}

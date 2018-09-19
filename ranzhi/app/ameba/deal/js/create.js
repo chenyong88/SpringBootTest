@@ -1,0 +1,4 @@
+$(function()
+{
+    $('#ajaxForm #type').change();
+});

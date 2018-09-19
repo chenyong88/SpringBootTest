@@ -1,0 +1,14 @@
+.radio-inline, .checkbox-inline {min-width: 90px;}
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {margin-left: 0;}
+
+input[type=checkbox] {margin-top: 2px;}
+td > .files-list > li {width: 200px;}
+.checkboxDIV, .radioDIV {padding: 8px; border: 1px solid #ccc; border-radius: 4px;}
+
+.table-form td + td {padding-left: 5px;}
+td.child > .table tr > td{padding-left: 0px;}
+td.child > .table tr > td > textarea{height: 32px;}
+
+.no-padding{padding: 0;}
+
+.nowrap{white-space: nowrap}

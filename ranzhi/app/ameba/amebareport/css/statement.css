@@ -1,0 +1,39 @@
+#menu .dropdown-submenu > a {min-width: 80px;}
+#menu .dropdown-submenu .dropdown-menu {left: 100%;}
+
+.currencyUnit, .showDetail {margin-right: 20px;}
+#showDetail {margin-right: 5px;}
+
+.profit {color: red;}
+.loss   {color: green;}
+
+.no-padding {padding: 0 !important;}
+
+/* datatable head */
+#datatable-statement .datatable-head-cell {border: none;}
+#datatable-statement .datatable-head-cell > .table {border: none;}
+#datatable-statement .datatable-head-cell > .table > thead > tr:last-child > th {border-bottom: none}
+#datatable-statement .datatable-row-flex .datatable-head-cell > .table > thead > tr > th:first-child {border-left: none}
+#datatable-statement .datatable-row-flex .datatable-head-cell > .table > thead > tr > th:last-child {border-right: none}
+
+/* datatable body */
+#datatable-statement .datatable-cell {border: none;}
+#datatable-statement .flexarea .datatable-cell > .table {border: none}
+#datatable-statement .flexarea .datatable-cell > .table > tbody > tr > td:first-child {border-left: none}
+#datatable-statement .flexarea .datatable-cell > .table > tbody > tr > td:last-child {border-right: none}
+
+#datatable-statement .title {font-size: 20px; vertical-align: middle; text-align: center; border: 1px solid #ddd; border-bottom: none; width: 280px;}
+#datatable-statement.scrolled-in .title {border-right: 1px solid #ddd; width: 281px;}
+
+#datatable-statement .scroll-slide {right: 0; left: 278px!important;}
+#datatable-statement .scroll-wrapper {position: fixed; left: 20px; right: 20px; bottom: 0}
+
+#datatable-statement th.active {background-color: #fce6a2}
+#datatable-statement td.active {background-color: #fce6a2}
+
+[data-row*=incomeexternalIncome] th:not(.primary-level), [data-row*=incomeexternalIncome] td{background-color: #FFE5E0!important;}
+[data-row*=incomeinternalIncome] th:not(.primary-level), [data-row*=incomeinternalIncome] td{background-color: #DDF4DF!important;}
+
+[data-row*=expenseinternalExpense] th:not(.primary-level), [data-row*=expenseinternalExpense] td{background-color: #DDF3F5!important;}
+[data-row*=expenseinternalDeal] th:not(.primary-level), [data-row*=expenseinternalDeal] td{background-color: #FFF0D5!important;}
+[data-row*=expenseshareExpense] th:not(.primary-level), [data-row*=expenseshareExpense] td{background-color: #F7EBEE!important;}

@@ -1,0 +1,8 @@
+#menu .dropdown-submenu > a {min-width: 80px;}
+#menu .dropdown-submenu .dropdown-menu {left: 100%;}
+
+td.nopaddingleft{padding-left: 0 !important;}
+td.fixpadding {padding-left: 5px !important; padding-right: 0;}
+td.action {padding-left: 5px !important;}
+.shareTips {margin-left: 20px;}
+.moneyTips {padding-left: 5px !important; color: #81511C;}

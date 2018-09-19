@@ -1,0 +1,13 @@
+.form-group span {padding-left:0;}
+.table {margin-top:5px;}
+.table .table-orderProduct td {padding:0px 5px 5px 0px;}
+.btn-plus, .btn-remove {margin-left:5px;}
+.required-finishedDate{width: 40%;}
+.table.table-form th, .table.table-form td {padding: 5px;}
+#duplicateError {display: inline-block;}
+#duplicateError .alert{padding: 3px 10px; margin-bottom: 0; text-align: left;}
+#duplicateError .close{right: 0; top: 5px; margin-left: 20px;} 
+
+#trader_chosen .chosen-results > li.no-results {cursor: pointer;}
+#trader_chosen .chosen-results > li.no-results:hover {color: #1a4f85; background-color: #ddd;}
+#trader_chosen .chosen-results > li.no-results > span {font-weight: bold;}

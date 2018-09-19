@@ -1,0 +1,177 @@
+<?php
+global $app;
+include $app->getBasePath() . '/app/sys/upgrade/ext/lang/zh-cn/bizext.php';
+
+$lang->upgrade->buildinEntry->hr['name'] = 'HR';
+$lang->upgrade->buildinEntry->hr['abbr'] = 'HR';
+
+$lang->upgrade->buildinEntry->flow['name'] = 'Flow';
+$lang->upgrade->buildinEntry->flow['abbr'] = 'Flow';
+
+$lang->upgrade->buildinEntry->psi['name'] = 'PSI';
+$lang->upgrade->buildinEntry->psi['abbr'] = 'PSI';
+
+$lang->upgrade->buildinEntry->ameba['name'] = 'Ameba';
+$lang->upgrade->buildinEntry->ameba['abbr'] = 'Ameba';
+
+$lang->upgrade->categoryList['收入']     = 'Income';
+$lang->upgrade->categoryList['外部收入'] = 'External income';
+$lang->upgrade->categoryList['内部收入'] = 'Internal income';
+$lang->upgrade->categoryList['支出']     = 'Expense';
+$lang->upgrade->categoryList['巴巴交易'] = 'Internal deal';
+$lang->upgrade->categoryList['巴内支出'] = 'Internal expense';
+$lang->upgrade->categoryList['公摊费用'] = 'Share expense';
+
+$lang->upgrade->cronList['appName=crm&moduleName=leads&methodName=sync']                    = 'Sync leads';
+$lang->upgrade->cronList['appName=cash&moduleName=trade&methodName=syncAlipay']             = 'Sync alipay';
+$lang->upgrade->cronList['appName=ameba&moduleName=deal&methodName=batchShare']             = 'Batch share income/expense';
+$lang->upgrade->cronList['appName=ameba&moduleName=amebareport&methodName=updateStatement'] = 'Update ameba statement';
+
+$lang->upgrade->flowList['meetingroom']['name']                  = 'Meetingroom';
+$lang->upgrade->flowList['meetingroom']['field']['name']         = 'Name';
+$lang->upgrade->flowList['meetingroom']['field']['position']     = 'Position';
+$lang->upgrade->flowList['meetingroom']['field']['seats']        = 'Seats';
+$lang->upgrade->flowList['meetingroom']['field']['equipment']    = 'Equipment';
+$lang->upgrade->flowList['meetingroom']['field']['workday']      = 'Workday';
+$lang->upgrade->flowList['meetingroom']['option']['position'][1] = '1F';
+$lang->upgrade->flowList['meetingroom']['option']['position'][2] = '2F';
+$lang->upgrade->flowList['meetingroom']['option']['position'][3] = '3F';
+$lang->upgrade->flowList['meetingroom']['option']['position'][4] = '4F';
+$lang->upgrade->flowList['meetingroom']['option']['position'][5] = '5F';
+$lang->upgrade->flowList['meetingroom']['menu']['所有会议室']    = 'Meetingroom';   // Do not translate or delete the chinese here.
+$lang->upgrade->flowList['meetingroom']['menu']['一楼会议室']    = '1F';   
+$lang->upgrade->flowList['meetingroom']['menu']['二楼会议室']    = '2F';
+$lang->upgrade->flowList['meetingroom']['menu']['三楼会议室']    = '3F';
+
+$lang->upgrade->flowList['meetingroombooking']['name']                 = 'Meetingroom Booking';
+$lang->upgrade->flowList['meetingroombooking']['field']['room']        = 'Meetingroom';
+$lang->upgrade->flowList['meetingroombooking']['field']['begin']       = 'Begin';
+$lang->upgrade->flowList['meetingroombooking']['field']['end']         = 'End';
+$lang->upgrade->flowList['meetingroombooking']['field']['orderedBy']   = 'Ordered By';
+$lang->upgrade->flowList['meetingroombooking']['field']['orderedDate'] = 'Ordered Date';
+$lang->upgrade->flowList['meetingroombooking']['field']['desc']        = 'Desc';
+$lang->upgrade->flowList['meetingroombooking']['menu']['所有预订']     = 'All';
+$lang->upgrade->flowList['meetingroombooking']['menu']['我的预订']     = 'My Bookings';
+
+$lang->upgrade->flowList['stamp']['name']                       = 'Stamp';
+$lang->upgrade->flowList['stamp']['field']['proposer']          = 'Proposer';
+$lang->upgrade->flowList['stamp']['field']['reason']            = 'Reason';
+$lang->upgrade->flowList['stamp']['field']['begin']             = 'Begin';
+$lang->upgrade->flowList['stamp']['field']['end']               = 'End';
+$lang->upgrade->flowList['stamp']['field']['type']              = 'Type';
+$lang->upgrade->flowList['stamp']['field']['desc']              = 'Desc';
+$lang->upgrade->flowList['stamp']['field']['status']            = 'Status';
+$lang->upgrade->flowList['stamp']['field']['reviewedby']        = 'Reviewed By';
+$lang->upgrade->flowList['stamp']['field']['reviewedDate']      = 'Reviewed Date';
+$lang->upgrade->flowList['stamp']['option']['type'][1]          = 'Official Seal';
+$lang->upgrade->flowList['stamp']['option']['type'][2]          = 'Corporate Seal';
+$lang->upgrade->flowList['stamp']['option']['type'][3]          = 'Contract Seal';
+$lang->upgrade->flowList['stamp']['option']['type'][4]          = 'Financial Seal';
+$lang->upgrade->flowList['stamp']['option']['status']['draft']  = 'Draft';
+$lang->upgrade->flowList['stamp']['option']['status']['wait']   = 'Wait';
+$lang->upgrade->flowList['stamp']['option']['status']['pass']   = 'Pass';
+$lang->upgrade->flowList['stamp']['option']['status']['reject'] = 'Reject';
+$lang->upgrade->flowList['stamp']['action']['reject']           = 'Reject';
+$lang->upgrade->flowList['stamp']['action']['pass']             = 'Pass';
+$lang->upgrade->flowList['stamp']['action']['submit']           = 'Submit';
+$lang->upgrade->flowList['stamp']['action']['revoke']           = 'Revoke';
+$lang->upgrade->flowList['stamp']['menu']['所有']               = 'All';
+$lang->upgrade->flowList['stamp']['menu']['我的申请']           = 'My Applications';
+$lang->upgrade->flowList['stamp']['menu']['我的审核']           = 'My Reviews';
+
+$lang->upgrade->flowList['car']['name']                          = 'Car';
+$lang->upgrade->flowList['car']['field']['type']                 = 'Type';
+$lang->upgrade->flowList['car']['field']['code']                 = 'Plate Number';
+$lang->upgrade->flowList['car']['field']['driver']               = 'Driver';
+$lang->upgrade->flowList['car']['field']['mobile']               = 'Mobile';
+$lang->upgrade->flowList['car']['field']['buyDate']              = 'Purchase Date';
+$lang->upgrade->flowList['car']['field']['price']                = 'Price';
+$lang->upgrade->flowList['car']['field']['status']               = 'Status';
+$lang->upgrade->flowList['car']['option']['type']['audi']        = 'Audi';
+$lang->upgrade->flowList['car']['option']['type']['benz']        = 'Benz';
+$lang->upgrade->flowList['car']['option']['type']['vw']          = 'Volkswagen';
+$lang->upgrade->flowList['car']['option']['status']['normal']    = 'Normal';
+$lang->upgrade->flowList['car']['option']['status']['repairing'] = 'Repairing';
+$lang->upgrade->flowList['car']['option']['status']['broken']    = 'Broken';
+$lang->upgrade->flowList['car']['option']['status']['scrapped']  = 'Scrapped';
+$lang->upgrade->flowList['car']['menu']['车辆列表']              = 'Cars';
+
+$lang->upgrade->flowList['carbooking']['name']                       = 'Car Booking';
+$lang->upgrade->flowList['carbooking']['field']['appliedBy']         = 'Applied By';
+$lang->upgrade->flowList['carbooking']['field']['appliedDate']       = 'Applied Date';
+$lang->upgrade->flowList['carbooking']['field']['car']               = 'Car';
+$lang->upgrade->flowList['carbooking']['field']['begin']             = 'Begin';
+$lang->upgrade->flowList['carbooking']['field']['end']               = 'End';
+$lang->upgrade->flowList['carbooking']['field']['reason']            = 'Reason';
+$lang->upgrade->flowList['carbooking']['field']['status']            = 'Status';
+$lang->upgrade->flowList['carbooking']['field']['reviewedBy']        = 'Reviewed By';
+$lang->upgrade->flowList['carbooking']['field']['reviewedDate']      = 'Reviewed Date';
+$lang->upgrade->flowList['carbooking']['option']['status']['wait']   = 'Wait';
+$lang->upgrade->flowList['carbooking']['option']['status']['pass']   = 'Pass';
+$lang->upgrade->flowList['carbooking']['option']['status']['reject'] = 'Reject';
+$lang->upgrade->flowList['carbooking']['action']['reject']           = 'Reject';
+$lang->upgrade->flowList['carbooking']['action']['pass']             = 'Pass';
+$lang->upgrade->flowList['carbooking']['menu']['所有预订']           = 'All';
+$lang->upgrade->flowList['carbooking']['menu']['我的预订']           = 'My Bookings';
+$lang->upgrade->flowList['carbooking']['menu']['我的审核']           = 'My Reviews';
+
+$lang->upgrade->flowList['collect']['name']                       = 'Collect';
+$lang->upgrade->flowList['collect']['field']['appliedBy']         = 'Applied By';
+$lang->upgrade->flowList['collect']['field']['appliedDate']       = 'Applied Date';
+$lang->upgrade->flowList['collect']['field']['money']             = 'Money';
+$lang->upgrade->flowList['collect']['field']['reason']            = 'Reason';
+$lang->upgrade->flowList['collect']['field']['status']            = 'Status';
+$lang->upgrade->flowList['collect']['field']['reviewedBy']        = 'Reviewed By';
+$lang->upgrade->flowList['collect']['field']['reviewedDate']      = 'Reviewed Date';
+$lang->upgrade->flowList['collect']['field']['depositor']         = 'Depositor';
+$lang->upgrade->flowList['collect']['field']['category']          = 'Category';
+$lang->upgrade->flowList['collect']['option']['status']['wait']   = 'Wait';
+$lang->upgrade->flowList['collect']['option']['status']['pass']   = 'Pass';
+$lang->upgrade->flowList['collect']['option']['status']['reject'] = 'Reject';
+$lang->upgrade->flowList['collect']['option']['status']['closed'] = 'Closed';
+$lang->upgrade->flowList['collect']['action']['pay']              = 'Pay';
+$lang->upgrade->flowList['collect']['action']['reject']           = 'Reject';
+$lang->upgrade->flowList['collect']['action']['pass']             = 'Pass';
+$lang->upgrade->flowList['collect']['menu']['所有']               = 'All';
+$lang->upgrade->flowList['collect']['menu']['我的请款']           = 'My Collects';
+$lang->upgrade->flowList['collect']['menu']['我的审核']           = 'My Reviews';
+$lang->upgrade->flowList['collect']['menu']['待付款']             = 'Payable';
+
+$lang->upgrade->flowList['buy']['name']                       = 'Purchase';
+$lang->upgrade->flowList['buy']['field']['provider']          = 'Provider';
+$lang->upgrade->flowList['buy']['field']['goods']             = 'Goods';
+$lang->upgrade->flowList['buy']['field']['money']             = 'Money';
+$lang->upgrade->flowList['buy']['field']['desc']              = 'Desc';
+$lang->upgrade->flowList['buy']['field']['status']            = 'Status';
+$lang->upgrade->flowList['buy']['field']['depositor']         = 'Depositor';
+$lang->upgrade->flowList['buy']['field']['category']          = 'Category';
+$lang->upgrade->flowList['buy']['option']['status']['unpaid'] = 'Unpaid';
+$lang->upgrade->flowList['buy']['option']['status']['paid']   = 'Paid';
+$lang->upgrade->flowList['buy']['action']['pay']              = 'Pay';
+$lang->upgrade->flowList['buy']['menu']['所有']               = 'All';
+$lang->upgrade->flowList['buy']['menu']['待付款']             = 'Payable';
+$lang->upgrade->flowList['buy']['menu']['已付款']             = 'Paid';
+
+$lang->upgrade->datasourceList[1]['name']                     = 'Orders';
+$lang->upgrade->datasourceList[2]['name']                     = 'Contracts';
+$lang->upgrade->datasourceList[3]['name']                     = 'Customers';
+$lang->upgrade->datasourceList[4]['name']                     = 'Providers';
+$lang->upgrade->datasourceList[5]['name']                     = 'Contacts';
+$lang->upgrade->datasourceList[6]['name']                     = 'Products';
+$lang->upgrade->datasourceList[7]['name']                     = 'Meetingrooms';
+$lang->upgrade->datasourceList[8]['name']                     = 'Equipments';
+$lang->upgrade->datasourceList[8]['datasource']['computer']   = 'Computer';
+$lang->upgrade->datasourceList[8]['datasource']['projector']  = 'Projector';
+$lang->upgrade->datasourceList[8]['datasource']['micphone']   = 'Micphone';
+$lang->upgrade->datasourceList[8]['datasource']['audio']      = 'Audio';
+$lang->upgrade->datasourceList[8]['datasource']['whiteboard'] = 'Whiteboard';
+$lang->upgrade->datasourceList[9]['name']                     = 'Working Days';
+$lang->upgrade->datasourceList[9]['datasource'][1]            = 'Monday';
+$lang->upgrade->datasourceList[9]['datasource'][2]            = 'Tuesday';
+$lang->upgrade->datasourceList[9]['datasource'][3]            = 'Wednesday';
+$lang->upgrade->datasourceList[9]['datasource'][4]            = 'Thursday';
+$lang->upgrade->datasourceList[9]['datasource'][5]            = 'Friday';
+$lang->upgrade->datasourceList[9]['datasource'][6]            = 'Saturday';
+$lang->upgrade->datasourceList[9]['datasource'][7]            = 'Sunday';
+$lang->upgrade->datasourceList[10]['name']                    = 'Depositors';
+$lang->upgrade->datasourceList[11]['name']                    = 'Expense Categories';
