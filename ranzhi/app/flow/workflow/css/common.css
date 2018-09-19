@@ -1,0 +1,18 @@
+.with-side .side{left: 20px; position: absolute; transition: all 0.3s ease 0s; width: 140px;}
+.with-side .main{margin-left: 160px; margin-right: 0; transition: all 0.3s ease 0s;}
+
+.treeview li.active {font-weight: bold;}
+
+.input-group + .input-group {margin-top: 5px;}
+.input-group-btn a{height: 32px;}
+.input-group-addon label{margin-bottom: 0;}
+
+.flow-block .info{overflow: auto; overflow-x: hidden;}
+.flow-block .info div{margin-bottom: 5px;}
+.footerbar{position: absolute; bottom: 25px; right: 20px;}
+#cardMode .footerbar .btn{padding: 3px 6px;}
+
+td .checkbox{display: inline-block; width: 80px; margin-bottom: 0;}
+
+.tooltip{z-index: 10000;}
+.table-form td + td{padding: 5px;}

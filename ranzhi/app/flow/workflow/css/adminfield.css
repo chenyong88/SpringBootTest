@@ -1,0 +1,4 @@
+.flow-block{height: 145px;}
+.flow-block .info{height: 75px;}
+.exportStatus0, .searchStatus0, .foreignKeyStatus0 {color: red;}
+.exportStatus1, .searchStatus1, .foreignKeyStatus1 {color: green;}

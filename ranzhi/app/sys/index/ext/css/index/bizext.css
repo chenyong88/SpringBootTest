@@ -1,0 +1,4 @@
+#bottomRightBar .bar-menu .input-group {width: 160px; margin-top: 5px;}
+#bottomRightBar .bar-menu .input-group input {height: 26px; border-radius: 0px;}
+#bottomRightBar .bar-menu .input-group a     {height: 26px; border-radius: 0px; border: 0 none; padding: 0px 5px 3px 5px; font-size: 13px;}
+#searchModal {top: 40px; right: 0px; width: 0px; display:none; position: fixed; z-index: 999; background-color: rgb(255,255,255);}

@@ -1,0 +1,10 @@
+.with-side .side{width: 14%;}
+.with-side .main{margin-left: 16%;}
+#treeMenuBox .treeview, #treeMenuBox .treeview li{margin-right: 0px;}
+.treeview li.active {font-weight: bold;}
+.menuDiv {padding:0px;}
+.nav-tabs {border: 0px;}
+div.menuDiv > ul.nav.nav-tabs {display:table;width:100%;}
+div.menuDiv > ul.nav.nav-tabs > li {display:table-cell;float:none;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {color: #333;}
+.nav-tabs>li>a, .nav-tabs>li>a:hover, .nav-tabs>li>a:focus {color: gray;}

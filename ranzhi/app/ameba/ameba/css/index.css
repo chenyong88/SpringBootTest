@@ -1,0 +1,8 @@
+.btn-capital {color: white; background-color: #ea644a; text-shadow: none;}
+.btn-profit  {color: white; background-color: #38b03f; text-shadow: none;}
+.btn-cost    {color: white; background-color: #f1a325; text-shadow: none;}
+.btn-budget  {color: white; background-color: #03b8cf; text-shadow: none;}
+.treemapMenu {display: inline-block;}
+
+.page-content {padding-right: 0px;}
+#companyTreemap {overflow: scroll;}

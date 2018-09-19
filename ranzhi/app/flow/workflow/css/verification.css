@@ -1,0 +1,4 @@
+.nopaddingleft {padding-left: 0px !important;}
+.nopaddingright {padding-right: 0px !important;}
+#paramType {border-radius: 0;}
+#param, #param_chosen .chosen-single {border-radius: 0 4px 4px 0;}

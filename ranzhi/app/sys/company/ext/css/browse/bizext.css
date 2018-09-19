@@ -1,0 +1,21 @@
+.dl-horizontal{margin: 5px 0;}
+.dl-horizontal dt{width: 80px;}
+.dl-horizontal dt.en{width: 160px;}
+.dl-horizontal dt.en + dd {margin-left: 180px;}
+.dl-horizontal dd{margin: 0 10px 0 90px;}
+.dl-horizontal.content dd{height: 35px; overflow-y: auto;}
+
+.card-company {background-color: #fafafa; height: 275px}
+.card-company > .card-heading {border-bottom: 1px solid #e5e5e5; position: relative;}
+.card-company > .card-heading > .info {position: absolute; right: 10px; top: 10px}
+.card-company > .card-heading > .subtitle > .cell:before {content: '-'; display: inline-block; margin: 0 7px 0 5px; color: #aaa}
+.card-company > .card-heading > .subtitle > .cell:first-child:before {display: none}
+.card-company > .card-caption {background: #fff; border-bottom: 1px solid #e5e5e5; padding: 8px 0; height: 175px}
+.card-company.card > .card-actions {padding: 8px 10px; position: absolute; bottom: 0; left: 0; width: 100%}
+
+.card-company > .card-heading.cash {background: #FFF4E5;}
+.card-company > .card-heading.cash > .info > .label {background: #E48600;}
+.card-company > .card-heading.online {background: #E5FFE6;}
+.card-company > .card-heading.online > .info > .label {background: #229F24;}
+.card-company > .card-heading.bank {background: #E5F9FF;}
+.card-company > .card-heading.bank > .info > .label {background: #39B3D7;}

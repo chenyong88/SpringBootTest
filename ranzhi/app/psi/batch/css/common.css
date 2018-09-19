@@ -1,0 +1,5 @@
+#basicForm{ margin-top:20px; }
+/* table info */
+.table-info { font-size: 13px; }
+.table-info th, .table-info td { border-bottom: none; padding: 2px 5px; }
+.table-info th { text-align: right; vertical-align: middle; border-bottom: none; font-weight: normal; }

@@ -1,0 +1,9 @@
+.table-form td {padding-top: 2px; padding-bottom: 2px;}
+.table-condition td, .table-result td {margin-left: 0px; margin-right: 0px; padding-left: 0px !important;}
+.table-condition, .table-result {margin-bottom: 0px;}
+
+.icon-plus, .icon-remove {margin-left: 5px;}
+.nopaddingleft {padding-left: 0px !important;}
+.nopaddingright {padding-right: 0px !important;}
+#paramType {border-radius: 0;}
+#param, #param_chosen .chosen-single {border-radius: 0 4px 4px 0;}

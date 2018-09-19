@@ -1,0 +1,3 @@
+#menuActions > form {max-width: 400px;}
+#menuActions > form .input-group{margin-top: 3px;}
+#menuActions > form .input-group .btn{margin: 0;}

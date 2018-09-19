@@ -1,0 +1,5 @@
+#varsTR .input-group input {height: 33px;}
+.input-group .chosen-container .chosen-single {height: 33px;border-radius: 0;}
+#searchTD label{font-weight: normal; cursor: pointer;}
+input[type=radio] {float: left; margin-top: 2px; margin-right: 8px;}
+td > .radio-inline {width: 80px;}
