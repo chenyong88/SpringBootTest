@@ -1,2 +1,6 @@
 /target/
-/.apt_generated/
+/bin/
+/.classpath
+/.project
+/.settings/
+/.gitignore
