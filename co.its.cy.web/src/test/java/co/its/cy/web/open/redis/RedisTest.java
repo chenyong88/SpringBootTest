@@ -4,9 +4,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import co.its.cy.web.open.core.redis.RedisTemplate;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -17,9 +18,9 @@ public class RedisTest {
 	private RedisTemplate<Object,Object> redisTemplate;
 	@Test
 	public void test() {
-		redisTemplate.opsForValue().set("cy22", null);
-		redisTemplate.opsForValue().set("cy", 12200);
-		System.out.println(redisTemplate.opsForValue().get("cy"));
+		redisTemplate.opsForValue().set("cy2222", null);
+		redisTemplate.opsForValue().set("c111y", 12200);
+		System.out.println(redisTemplate.opsForValue().get("c111y"));
 		
 	}
 }
