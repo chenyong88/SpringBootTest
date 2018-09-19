@@ -1,4 +1,4 @@
-package co.its.cy.core.model;
+/*package co.its.cy.core.model;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,14 +23,14 @@ import co.its.cy.common.util.LoggerUtils;
 import co.its.cy.core.MavenInfo.DDlAuto;
 
 
-/**
+*//**
  * 
  * 
  * @author chenyong
  * @projectName co.its.cy.service
  * @typeName ModelCreateRepositoryFactory
  * @time 2018年9月17日 下午7:19:01
- */
+ *//*
 public class ModelCreateRepositoryFactory {
 	static ModelCreateRepositoryFactory createFactory = new ModelCreateRepositoryFactory();
 
@@ -101,14 +101,14 @@ public class ModelCreateRepositoryFactory {
 			}
 
 			if (!isTransient) {// 132
-				switch (null.$SwitchMap$co$jufeng$core$MavenInfo$DDlAuto[ddlAuto.ordinal()]) {// 137
+				switch (1) {// 137
 				case 1:
 					if (file.isFile()) {// 139
 						System.out.println("file UPDATE ==============" + file);// 140
 
 						try {
 							FileInputStream arg31 = new FileInputStream(file);// 143
-							String javaText = IOUtils.toString(arg31, "UTF-8");// 144
+							//String javaText = IOUtils.toString(arg31, "UTF-8");// 144
 							Class model = Class.forName(modelPackage.concat(".").concat(serviceName).concat(".")
 									.concat(api.getName().replaceAll(".java", "")));// 146
 
@@ -251,3 +251,4 @@ public class ModelCreateRepositoryFactory {
 		}
 	}// 242 316
 }
+*/
