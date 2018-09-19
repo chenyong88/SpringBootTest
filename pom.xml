@@ -9,6 +9,7 @@
 		<module>co.its.cy.api</module>
 		<module>co.its.cy.service</module>
 		<module>co.its.cy.web</module>
+		<module>co.its.cy.domain</module>
 	</modules>
 
 	<parent>

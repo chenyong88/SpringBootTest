@@ -9,7 +9,6 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -17,6 +16,7 @@ import com.alibaba.dubbo.common.logger.Logger;
 import com.alibaba.dubbo.common.logger.LoggerFactory;
 
 import co.its.cy.web.open.annotation.RequestLimitAnnotation;
+import co.its.cy.web.open.core.redis.RedisTemplate;
 import co.its.cy.web.open.exception.RequestLimitException;
 import co.its.cy.web.open.util.WebSocketUtil;
 
