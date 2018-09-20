@@ -10,7 +10,7 @@ import com.xiaoleilu.hutool.json.JSONObject;
 import com.xiaoleilu.hutool.json.JSONUtil;
 
 import co.its.cy.api.sys.SysUserService;
-import co.its.cy.entity.SysUser;
+import co.its.cy.entity.sys.SysUser;
 import co.its.cy.repository.SysUserRepository;
 
 @Service
