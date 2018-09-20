@@ -27,7 +27,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.data.redis.RedisSystemException;
 import org.springframework.data.redis.connection.DataType;
@@ -51,10 +50,8 @@ import org.springframework.data.redis.core.GeoOperations;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.HyperLogLogOperations;
 import org.springframework.data.redis.core.ListOperations;
-import org.springframework.data.redis.core.RedisAccessor;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisConnectionUtils;
-import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.SetOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -105,7 +102,7 @@ import org.springframework.util.CollectionUtils;
  * @param <V> the Redis value type against which the template works
  * @see StringRedisTemplate
  */
-public class RedisTemplate<K, V> extends RedisAccessor implements RedisOperations<K, V>, BeanClassLoaderAware {
+public class RedisTemplate<K, V> extends org.springframework.data.redis.core.RedisTemplate<K, V> {
 
 	private boolean enableTransactionSupport = false;
 	private boolean exposeConnection = false;
