@@ -6,7 +6,7 @@ module.exports = {
     userid: 10001,
   },
 
-  'POST /api/login': (req, res) => {
+  'POST  /api/login': (req, res) => {
     const { password, username } = req.body;
     if (username === 'admin' && password === 'admin') {
       res.send({

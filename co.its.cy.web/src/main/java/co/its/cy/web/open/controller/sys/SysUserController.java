@@ -34,15 +34,16 @@ public class SysUserController {
 	
 	@RequestMapping(value="/login")
 	public ApiResult login(String action,String jsonString,HttpServletRequest request) {
+		jsonString = JSONUtil.toJsonStr(request.getParameter("data"));
 		Serializable user =  sysUserService.login(jsonString);
 		JSONObject jsonObject = JSONUtil.parseObj(user);
-		Boolean flag = redisTemplate.opsForValue().setBit("login:"+ DateUtil.formatDate(new Date()),jsonObject.getLong("id") , true);
+		//Boolean flag = redisTemplate.opsForValue().setBit("login:"+ DateUtil.formatDate(new Date()),jsonObject.getLong("id") , true);
 		
-		System.out.println(redisTemplate.opsForValue().getBit(("login:"+ DateUtil.formatDate(new Date())), jsonObject.getLong("id")));
+		//System.out.println(redisTemplate.opsForValue().getBit(("login:"+ DateUtil.formatDate(new Date())), jsonObject.getLong("id")));
 		
-		if(flag) {
+		/*if(flag) {
 			return ApiResultGenerator.successRessult(flag);
-		}
+		}*/
 		return ApiResultGenerator.result(true, "登陆失败", "", "", 0, null);
 	}
 	

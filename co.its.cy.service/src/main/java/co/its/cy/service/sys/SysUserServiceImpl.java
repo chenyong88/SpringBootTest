@@ -38,6 +38,7 @@ public class SysUserServiceImpl implements SysUserService{
 
 	@Override
 	public Serializable login(String jsonString) throws RuntimeException {
+		
 		SysUser s = sysUserRepository.findByUserName("1");
 		return s;
 	}

@@ -1,6 +1,7 @@
 package co.its.cy.entity.sys;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import co.its.cy.entity.base.BaseEntity;
 import lombok.AllArgsConstructor;
@@ -11,6 +12,7 @@ import lombok.ToString;
 
 @Data
 @Entity
+@Table
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

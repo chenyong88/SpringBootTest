@@ -17,42 +17,42 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="sysuser")
+@Table(name="SysUser")
 public class SysUser  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	private Integer id;
 	
-	@Column(name="parentuserid")
+	@Column
 	private Integer parentUserID;
-	@Column(name="usercode")
+	@Column
 	private String userCode;
-	@Column(name="username")
+	@Column
 	private String userName;
-	@Column(name="password")
+	@Column
 	private String password;
-	@Column(name="phone")
+	@Column
 	private String phone;
-	@Column(name="active")
+	@Column
 	private Boolean active;
-	@Column(name="roleid")
+	@Column
 	private Integer roleID;
-	@Column(name="clientid")
+	@Column
 	private Integer clientID;
-	@Column(name="usertype")
+	@Column
 	private Short userType;
-	@Column(name="loginnum")
+	@Column
 	private Integer loginNum;
-	@Column(name="lastlogintime")
+	@Column
 	private Date lastLoginTime;
-	@Column(name="memo")
+	@Column
 	private String memo;
-	@Column(name="modifyman")
+	@Column
 	private String modifyMan;
-	@Column(name="modifytime")
+	@Column
 	private Date modifyTime;
-	@Column(name="phonemac")
+	@Column
 	private String phoneMac;
 
 } 
