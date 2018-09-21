@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: co.its.cy.domain
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: asus
+Built-By: rj007
 Implementation-Vendor-Id: co.its.cy
-Build-Jdk: 1.8.0_144
+Build-Jdk: 1.8.0_131
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/co.its.cy.parent/co.its.cy.domain
 Created-By: Maven Integration for Eclipse
