@@ -23,7 +23,7 @@ public class DemoControllerTest  extends BaseControllerTest{
     
     @Test
     public void getHello() throws Exception {
-       String result = 	HttpUtil.get(base+"/api?action=demoService.say&jsonString=1");
+       String result = 	HttpUtil.get(base+"/api1/123");
        System.out.println(result);
     	
     }

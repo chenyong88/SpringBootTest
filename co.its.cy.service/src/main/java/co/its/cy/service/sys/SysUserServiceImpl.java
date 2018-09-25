@@ -5,9 +5,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Service;
-import com.xiaoleilu.hutool.json.JSONObject;
-import com.xiaoleilu.hutool.json.JSONUtil;
 
 import co.its.cy.api.sys.SysUserService;
 import co.its.cy.entity.sys.SysUser;
@@ -38,7 +37,12 @@ public class SysUserServiceImpl implements SysUserService{
 
 	@Override
 	public Serializable login(String jsonString) throws RuntimeException {
-		SysUser s = sysUserRepository.findByUserName("1");
+		SysUser sysUser = com.alibaba.fastjson.JSON.parseObject(jsonString, SysUser.class);
+		if(StringUtils.isEmpty(sysUser.getUserName())) {
+			
+		}
+		SysUser s = sysUserRepository.findByUserName(sysUser.getUserName());
+		
 		return s;
 	}
 
