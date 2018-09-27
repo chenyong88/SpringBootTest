@@ -3,32 +3,31 @@
  * profile actions
  *
  */
-
-import {
-  USER_PROFILE_REQUEST,
-  USER_PROFILE_FAILURE,
-  USER_PROFILE_SUCCESS,
-} from './constants';
 import { getDashboardInfo} from '../../api';
+  import {
+  DASH_BOARD_REQUEST,
+  DASH_BOARD_FAILURE,
+  DASH_BOARD_SUCCESS,
+} from './constants';
 
 const dashBoardRequest = () => {
   return {
-    type: USER_PROFILE_REQUEST,
+    type: DASH_BOARD_REQUEST,
     isLoading: true,
   };
 };
 
 const dashBoardSuccess = (payload) => {
   return {
-    type: USER_PROFILE_FAILURE,
+    type: DASH_BOARD_SUCCESS,
     isLoading: false,
     payload,
   };
 };
 
-constdashBoardFailure = (payload) => {
+const dashBoardFailure = (payload) => {
   return {
-    type: USER_PROFILE_SUCCESS,
+    type: DASH_BOARD_FAILURE,
     isLoading: false,
     payload,
   };

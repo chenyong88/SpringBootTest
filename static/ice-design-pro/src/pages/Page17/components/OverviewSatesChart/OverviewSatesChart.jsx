@@ -3,60 +3,24 @@ import { Grid, Icon } from '@icedesign/base';
 import IceContainer from '@icedesign/container';
 import ColumnChart from './ColumnChart';
 import { dashBoard } from '../../../../store/dashboard/action';
+import reducer from '../../../../store/dashboard/reducer';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import injectReducer from '../../../../utils/injectReducer';
 
 const { Row, Col } = Grid;
-
-
-const mockData = [
-  {
-    title: '页面预览',
-    amount: '1,293',
-    percent: '15%',
-    increase: true,
-    color: '#fff',
-    borderColor: '#4FD4A4',
-    background: '#1BC98E',
-  },
-  {
-    title: '下载次数',
-    amount: '758',
-    percent: '1.3%',
-    increase: false,
-    color: '#fff',
-    borderColor: '#EB6C7A',
-    background: '#E64758',
-  },
-  {
-    title: '月活跃用户',
-    amount: '3,659',
-    percent: '20%',
-    increase: true,
-    color: '#fff',
-    borderColor: '#B29FFF',
-    background: '#9F85FF',
-  },
-  {
-    title: '日活跃用户',
-    amount: '298',
-    percent: '12%',
-    increase: false,
-    color: '#fff',
-    borderColor: '#E9E063',
-    background: '#E5D936',
-  },
-];
-
-export default class OverviewSatesChart extends Component {
+class OverviewSatesChart extends Component {
   static displayName = 'OverviewSatesChart';
-
+  static propTypes = {};
+  static defaultProps = {};
   constructor(props) {
     super(props);
     this.state = {};
   }
 
-  
-
   render() {
+    var  mockData = [];
+
     return (
       <IceContainer>
         <Row wrap gutter={20}>
@@ -93,8 +57,32 @@ export default class OverviewSatesChart extends Component {
         </Row>
       </IceContainer>
     );
+  
+  
   }
 }
+const  mapDispatchToProps = {
+  dashBoard,
+};
+
+const mapStateToProps = (state) => {
+  return { result: state.login };
+};
+
+const withConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps
+);
+
+const withReducer = injectReducer({ key: 'overview', reducer });
+
+export default compose(
+  withReducer,
+  withConnect
+)(OverviewSatesChart);
+
+
+
 
 const styles = {
   content: {

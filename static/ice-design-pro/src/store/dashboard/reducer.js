@@ -5,9 +5,9 @@
  */
 
 import {
-  USER_PROFILE_REQUEST,
-  USER_PROFILE_FAILURE,
-  USER_PROFILE_SUCCESS,
+  DASH_BOARD_REQUEST,
+  DASH_BOARD_FAILURE,
+  DASH_BOARD_SUCCESS,
 } from './constants';
 
 // The initial state
@@ -15,16 +15,16 @@ const initialState = {};
 
 function dashBoardReducer(state = initialState, action) {
   switch (action.type) {
-    case USER_PROFILE_REQUEST:
+    case DASH_BOARD_REQUEST:
       return Object.assign({}, state, {
         isLoading: action.isLoading,
       });
-    case USER_PROFILE_FAILURE:
+    case DASH_BOARD_FAILURE:
       return Object.assign({}, state, {
         isLoading: action.isLoading,
         ...action.payload,
       });
-    case USER_PROFILE_SUCCESS:
+    case DASH_BOARD_SUCCESS:
       return Object.assign({}, state, {
         isLoading: action.isLoading,
       });
