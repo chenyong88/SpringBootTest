@@ -23,12 +23,22 @@ export async function postUserLogout() {
   });
 }
 
+export async function getDashboardInfo(){
+  return axios({
+    url: '/getDashboardInfo',
+    method: 'get',
+  });
+}
+
 export async function getUserProfile() {
   return axios('/api/profile');
 }
 
+
+
 export default {
   postUserRegister,
   postUserLogout,
+  getDashboardInfo,
   getUserProfile,
 };

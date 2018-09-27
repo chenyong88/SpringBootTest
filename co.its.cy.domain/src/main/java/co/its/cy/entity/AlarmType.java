@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 @javax.persistence.Entity
-@javax.persistence.Table(name="alarmtype")
+@javax.persistence.Table
 public class AlarmType  implements Serializable{
 	private static final long serialVersionUID = -5218076739283020378L;
 	
@@ -19,13 +19,10 @@ public class AlarmType  implements Serializable{
 	@GeneratedValue
 	private Integer id;
   
-	@Column( name = "alarmdesc" )
 	private String alarmDesc;
 	
-	@Column( name = "groupname" )
 	private String groupName;
 	
-	@Column( name = "showflag" )
 	private Integer showFlag;
 	
 	

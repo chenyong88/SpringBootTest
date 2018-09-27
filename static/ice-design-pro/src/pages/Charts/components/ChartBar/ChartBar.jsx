@@ -54,7 +54,7 @@ export default class ChartBar extends Component {
       <div className="chart-bar">
         <IceContainer>
           <h4 style={styles.title}>柱状图</h4>
-          <Chart height={400} data={dv} forceFit>
+          <Chart height={500} data={dv} forceFit>
             <Axis name="月份" />
             <Axis name="月均降雨量" />
             <Legend />

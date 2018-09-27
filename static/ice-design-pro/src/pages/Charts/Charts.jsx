@@ -28,16 +28,6 @@ export default class Charts extends Component {
     return (
       <div className="charts-page">
         <ChartBar />
-
-        <ChartArea />
-
-        <ChartBubbleImage />
-
-        <ChartBox />
-
-        <ChartTypeLine />
-
-        <ChartRadar />
       </div>
     );
   }
