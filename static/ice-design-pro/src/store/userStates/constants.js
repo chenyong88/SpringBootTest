@@ -1,0 +1,9 @@
+/*
+ *
+ * USER_STATES constants
+ *
+ */
+
+export const USER_STATES_REQUEST = 'PRO/USER_STATES_REQUEST';
+export const USER_STATES_FAILURE = 'PRO/USER_STATES_FAILURE';
+export const USER_STATES_SUCCESS = 'PRO/USER_STATES_SUCCESS';

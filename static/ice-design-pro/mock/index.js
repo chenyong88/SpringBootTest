@@ -1,5 +1,6 @@
 //定义静态数据
 const overViewSatesChartData = require('./overview_sates_chart_data.json');
+const userStatsChartData = require('./user-stat-chart.json');
 module.exports = {
   'GET /api/profile': {
     name: '淘小宝',
@@ -9,6 +10,7 @@ module.exports = {
   },
 
   '/getDashboardInfo': overViewSatesChartData,
+  '/getUserStatesInfo':userStatsChartData,
 
   'POST /api/login': (req, res) => {
     const { password, username } = req.body;

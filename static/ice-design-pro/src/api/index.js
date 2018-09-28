@@ -29,6 +29,12 @@ export async function getDashboardInfo(){
     method: 'get',
   });
 }
+export async function getUserStatesInfo(){
+  return axios({
+    url: '/getUserStatesInfo',
+    method: 'get'
+  });
+}
 
 export async function getUserProfile() {
   return axios('/api/profile');
@@ -40,5 +46,6 @@ export default {
   postUserRegister,
   postUserLogout,
   getDashboardInfo,
+  getUserStatesInfo,
   getUserProfile,
 };
