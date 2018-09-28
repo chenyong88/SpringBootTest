@@ -5,12 +5,10 @@ import UserTrafficStastistics from './components/UserTrafficStastistics';
 
 export default class Page17 extends Component {
   static displayName = 'Page17';
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
   render() {
     return (
       <div className="page17-page">
@@ -21,3 +19,4 @@ export default class Page17 extends Component {
     );
   }
 }
+

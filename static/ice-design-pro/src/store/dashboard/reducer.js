@@ -25,9 +25,7 @@ function dashBoardReducer(state = initialState, action) {
         ...action.payload,
       });
     case DASH_BOARD_SUCCESS:
-      return Object.assign({}, state, {
-        isLoading: action.isLoading,
-      });
+      return action.payload.data;
     default:
       return state;
   }

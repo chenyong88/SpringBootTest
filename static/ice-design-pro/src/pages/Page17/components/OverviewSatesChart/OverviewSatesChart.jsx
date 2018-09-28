@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 import { Grid, Icon } from '@icedesign/base';
 import IceContainer from '@icedesign/container';
 import ColumnChart from './ColumnChart';
+import injectReducer from '../../../../utils/injectReducer';
+import dashBoardReducer from '../../../../store/dashboard/reducer';
 import { dashBoard } from '../../../../store/dashboard/action';
-import reducer from '../../../../store/dashboard/reducer';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import injectReducer from '../../../../utils/injectReducer';
-
 const { Row, Col } = Grid;
-class OverviewSatesChart extends Component {
+
+
+var mockData = [];
+ class OverviewSatesChart extends Component {
   static displayName = 'OverviewSatesChart';
-  static propTypes = {};
-  static defaultProps = {};
   constructor(props) {
     super(props);
-    this.state = {};
   }
-
+  componentDidMount() {
+    this.props.dashBoard();
+  }
   render() {
-    var  mockData = [];
+    const dashBoardData = this.props.dashBoardData;
+    
+    if(Array.isArray(dashBoardData)){
+        mockData = dashBoardData;
+    }
 
     return (
       <IceContainer>
@@ -61,27 +66,25 @@ class OverviewSatesChart extends Component {
   
   }
 }
-const  mapDispatchToProps = {
-  dashBoard,
-};
 
+const mapDispatchToProps = {
+  dashBoard
+};
 const mapStateToProps = (state) => {
-  return { result: state.login };
+  return state;
 };
-
 const withConnect = connect(
   mapStateToProps,
   mapDispatchToProps
 );
-
-const withReducer = injectReducer({ key: 'overview', reducer });
-
+const withDataBoardReducer = injectReducer({
+  key: 'dashBoardData',
+  reducer: dashBoardReducer,
+});
 export default compose(
-  withReducer,
+  withDataBoardReducer,
   withConnect
 )(OverviewSatesChart);
-
-
 
 
 const styles = {
