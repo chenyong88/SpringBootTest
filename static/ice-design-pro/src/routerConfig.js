@@ -23,17 +23,18 @@ import CardList from './pages/CardList';
 import BasicTable from './pages/BasicTable';
 import TableDisplay from './pages/TableDisplay';
 import Page17 from './pages/Page17';
+import System from './pages/System';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
   {
-    path: '/portlets/base',
-    component: Portlets,
+    path: '/dashboard',
+    component: Dashboard,
     layout: BasicLayout,
   },
   {
-    path: '/dashboard',
-    component: Dashboard,
+    path: '/portlets/terms',
+    component: Terms,
     layout: BasicLayout,
   },
   {
@@ -72,8 +73,8 @@ const routerConfig = [
     layout: BasicLayout,
   },
   {
-    path: '/portlets/terms',
-    component: Terms,
+    path: '/portlets/base',
+    component: Portlets,
     layout: BasicLayout,
   },
   {
@@ -110,6 +111,12 @@ const routerConfig = [
     path: '/page17',
     layout: BasicLayout,
     component: Page17,
+  },
+ 
+  {
+    path: '/Menu',
+    layout: BasicLayout,
+    component: System,
   },
 ];
 
