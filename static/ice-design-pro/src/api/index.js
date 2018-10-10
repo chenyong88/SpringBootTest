@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export async function login(params) {
   return axios({
-    url: '/api/login',
+    url: 'http://192.168.20.149:8080/js/login',
     method: 'post',
     data: params,
   });
